@@ -1,5 +1,7 @@
 # Chewie Store
 
+[![Build Status](https://travis-ci.org/brunats/chewie.svg?branch=master)](https://travis-ci.org/brunats/chewie)
+
 ## Setup
 
 ```sh
