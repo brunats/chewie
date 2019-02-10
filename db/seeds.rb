@@ -23,3 +23,23 @@ Order.create!(
     )
   ]
 )
+Order.create!(
+  customer: Customer.second,
+  order_products: [
+    OrderProduct.new(
+      units: 4,
+      unit_price: Product.second.price,
+      product: Product.second
+    )
+  ]
+)
+Order.create!(
+  customer: Customer.third,
+  order_products: [
+    OrderProduct.new(
+      units: 4,
+      unit_price: Product.third.price,
+      product: Product.third
+    )
+  ]
+)

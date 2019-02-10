@@ -1,0 +1,8 @@
+<tr id="<%= "product#{product.id}" %>">
+  <th class="align-middle" scope="row"><%= product.id %></th>
+  <th class="align-middle" scope="row"><%= product.name %></th>
+  <th class="align-middle" scope="row"><%= product.multiple %></th>
+  <th class="align-middle" scope="row"><%= number_to_currency(product.price) %></th>
+  <th class="align-middle" scope="row"><%= text_field_tag("unit_price[#{product.id}]") %></th>
+  <th class="align-middle" scope="row"><%= text_field_tag("units[#{product.id}]") %></th>
+</tr>

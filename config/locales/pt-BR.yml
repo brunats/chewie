@@ -11,3 +11,17 @@ pt-BR:
     attributes:
           order:
             customer: Cliente
+          product:
+            name: Nome do Produto
+            price: Preço Sugerido
+            multiple: Multiplo
+          order_product:
+            units: Unidades da Compra
+            unit_price: Preço por Unidade
+  orders:
+    new:
+      title: Novo Pedido
+      create: Criar
+    edit:
+      title: 'Pedido #%{id}'
+      save: Salvar
