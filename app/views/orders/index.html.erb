@@ -1,13 +1,13 @@
 <div class="row">
-  <h1 class="display-4">
+  <h2>
     <%= Order.model_name.human(count: @orders.count) %>
-  </h1>
+  </h2>
 </div>
 
 <div class="row">
   <table class="table table-striped table-borderless">
     <thead>
-      <tr>
+      <tr class="align-middle">
         <th scope="col">#</th>
         <th scope="col"><%= Order.human_attribute_name(:customer) %></th>
         <th scope="col"><%= OrderProduct.model_name.human(count: 2) %></th>

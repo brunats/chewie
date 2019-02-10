@@ -1,6 +1,13 @@
 <tr id="<%= "order#{order.id}" %>">
-  <th scope="row"><%= order.id %></th>
-  <td><%= order.customer.name %></td>
-  <td><%= order.order_products.count %></td>
-  <td> <%= fa_icon('pencil-alt') %> </td>
+  <th class="align-middle" scope="row"><%= order.id %></th>
+  <td class="align-middle"><%= order.customer.name %></td>
+  <td class="align-middle"><%= order.order_products.count %></td>
+  <td class="align-middle">
+    <button type="button" class="btn btn-outline-primary">
+      <%= fa_icon('pencil') %>
+    </button>
+    <button type="button" class="btn btn-outline-danger">
+      <%= fa_icon('trash') %>
+    </button>
+  </td>
 </tr>

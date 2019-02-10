@@ -1,7 +1,13 @@
 class OrdersController < ApplicationController
   before_action :orders, only: :index
 
-  def index; end
+  def index
+    flash[:success] = 'oie sucess'
+  end
+
+  def destroy
+    redirect_to(root_path)
+  end
 
   private
 
