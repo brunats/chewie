@@ -1,0 +1,5 @@
+pt-BR:
+  hello: Olá mundo
+  orders:
+    index:
+      title: Pedidos
