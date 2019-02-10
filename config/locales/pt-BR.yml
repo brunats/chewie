@@ -1,5 +1,12 @@
 pt-BR:
-  hello: Olá mundo
-  orders:
-    index:
-      title: Pedidos
+  activerecord:
+    models:
+      order:
+        one: Pedido
+        other: Pedidos
+      order_product:
+        one: Item do Pedido
+        other: Itens do Pedido
+    attributes:
+          order:
+            customer: Cliente

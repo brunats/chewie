@@ -1,5 +1,9 @@
 en:
-  hello: Hello world
-  orders:
-    index:
-      title: Orders
+  activerecord:
+    models:
+      order:
+        one: Order
+        other: Orders
+    attributes:
+          order:
+            customer: Customer

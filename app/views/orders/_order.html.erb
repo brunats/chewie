@@ -1,2 +1,6 @@
-<%= order.customer.name %>
-<br>
+<tr id="<%= "order#{order.id}" %>">
+  <th scope="row"><%= order.id %></th>
+  <td><%= order.customer.name %></td>
+  <td><%= order.order_products.count %></td>
+  <td> <%= fa_icon('pencil-alt') %> </td>
+</tr>

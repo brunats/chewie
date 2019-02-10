@@ -6,6 +6,6 @@ class OrdersController < ApplicationController
   private
 
   def orders
-    @orders ||= Order.all.includes(:customer)
+    @orders ||= Order.all.includes(:customer, :order_products)
   end
 end

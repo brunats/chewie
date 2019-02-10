@@ -14,5 +14,6 @@ module Chewie
     config.i18n.default_locale = 'pt-BR'
     config.action_view.raise_on_missing_translations = true
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**/*.{yml}').to_s]
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
