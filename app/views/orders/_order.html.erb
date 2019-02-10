@@ -6,8 +6,9 @@
     <button type="button" class="btn btn-outline-primary">
       <%= fa_icon('pencil') %>
     </button>
-    <button type="button" class="btn btn-outline-danger">
+
+    <%= link_to order_path(order), class: 'btn btn-outline-danger', method: :delete do %>
       <%= fa_icon('trash') %>
-    </button>
+    <% end %>
   </td>
 </tr>

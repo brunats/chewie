@@ -1,4 +1,5 @@
 pt-BR:
+  destroyed: Removido com sucesso
   activerecord:
     models:
       order:

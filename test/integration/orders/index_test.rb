@@ -16,6 +16,23 @@ module Orders
       assert_equal index_page.navbar_title, 'Chewie Store'
     end
 
+    test 'delete order' do
+      Capybara.current_driver = Capybara.javascript_driver
+
+      order = Order.new()
+      customer = Customer.create!(name: 'Chewie')
+      order.customer = customer
+      order.save!
+
+      index_page.visit
+      assert index_page.has_order?(order)
+
+      index_page.click_on_delete_order(order)
+
+      assert index_page.has_alert?
+      assert_equal index_page.alert_text, 'Removido com sucesso'
+    end
+
     private
 
     def index_page
