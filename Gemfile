@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'rails-i18n', '~> 5.1'
 gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails', '~> 4.3.3'
 
 gem 'rb-readline'
 
