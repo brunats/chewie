@@ -15,7 +15,9 @@ class OrdersController < ApplicationController
     render :new
   end
 
-  def edit; end
+  def edit
+    @order_product = OrderProduct.new(order: order)
+  end
 
   def update
     order.customer = customer

@@ -1,0 +1,10 @@
+<tr id="<%= "order#{order_product.id}" %>">
+  <td class="align-middle"><%= order_product.product.name %></td>
+  <td class="align-middle"><%= order_product.units %></td>
+  <td class="align-middle"><%= number_to_currency(order_product.unit_price) %></td>
+  <td class="align-middle">
+    <%= link_to order_product_path(order_product, order_id: @order.id), class: 'btn btn-outline-danger', method: :delete do %>
+      <%= fa_icon('trash') %>
+    <% end %>
+  </td>
+</tr>

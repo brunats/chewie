@@ -16,6 +16,7 @@ pt-BR:
             price: Preço Sugerido
             multiple: Multiplo
           order_product:
+            product: Produto
             units: Unidades da Compra
             unit_price: Preço por Unidade
   orders:
@@ -27,3 +28,5 @@ pt-BR:
       title: 'Pedido #%{id}'
       save: Salvar
       back: Voltar
+    order_product_form:
+      add: Adicionar

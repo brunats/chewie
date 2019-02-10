@@ -12,9 +12,12 @@
 </div>
 
 <%= form_for @order, url: order_path(@order.id), method: :patch do |f| %>
-  <%= render(partial: 'form', locals: { order: @new_order, f: f }) %>
+  <%= render(partial: 'form', locals: { order: @order, f: f }) %>
 
   <div class="col-12 text-center">
     <%= f.submit t('.save') %>
   </div>
 <% end %>
+
+<br>
+<%= render(partial: 'order_product_form', locals: { order: @order }) %>
