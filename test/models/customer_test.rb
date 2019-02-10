@@ -1,4 +1,3 @@
-# test/models/user_test.rb
 require 'test_helper'
 
 class CustomerTest < ActiveSupport::TestCase
