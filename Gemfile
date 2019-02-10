@@ -37,6 +37,7 @@ group :test do
   gem 'database_cleaner'
 
   gem 'capybara', '>= 2.15'
+  gem 'capybara-selenium'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 end
