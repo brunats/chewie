@@ -8,6 +8,10 @@ module Pages
       def visit
         @page.visit(root_path)
       end
+
+      def has_navbar?
+        @page.find('.navbar').visible?
+      end
     end
   end
 end

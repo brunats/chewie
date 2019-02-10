@@ -4,11 +4,11 @@ module Orders
   class IndexTest < ActionDispatch::IntegrationTest
     include Capybara::DSL
 
-    test 'test' do
+    test 'index page must have navbar' do
       Capybara.current_driver = Capybara.javascript_driver
 
       index_page.visit
-      # binding.pry
+      assert index_page.has_navbar?
     end
 
     private
