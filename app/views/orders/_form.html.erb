@@ -1,0 +1,8 @@
+<div class="form-group row">
+  <div class="col-6 text-right font-weight-bold">
+    <%= f.label :customer, html: {class: 'col-sm-2 col-form-label'}, selected: @order&.customer_id %>
+  </div>
+  <div class="col-6">
+    <%= f.select :customer_id, Customer.order(:name).collect { |p| [ p.name, p.id ] }, html: {class: 'form-control'}%>
+  </div>
+</div>

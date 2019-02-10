@@ -6,20 +6,14 @@
   </div>
   <div class="col-2">
     <%= link_to root_path, class: 'btn btn-outline-primary' do %>
-      Voltar
+      <%= t('.back') %>
     <% end %>
   </div>
 </div>
 
 <%= form_for @order, url: order_path(@order.id), method: :patch do |f| %>
-  <div class="form-group row">
-    <div class="col-6 text-right font-weight-bold">
-      <%= f.label :customer, html: {class: 'col-sm-2 col-form-label'}, :selected => @order.customer.id%>
-    </div>
-    <div class="col-6">
-      <%= f.select :customer_id, Customer.order(:name).collect { |p| [ p.name, p.id ] }, html: {class: 'form-control'}%>
-    </div>
-  </div>
+  <%= render(partial: 'form', locals: { order: @new_order, f: f }) %>
+
   <div class="col-12 text-center">
     <%= f.submit t('.save') %>
   </div>

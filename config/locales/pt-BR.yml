@@ -22,6 +22,8 @@ pt-BR:
     new:
       title: Novo Pedido
       create: Criar
+      back: Voltar
     edit:
       title: 'Pedido #%{id}'
       save: Salvar
+      back: Voltar
