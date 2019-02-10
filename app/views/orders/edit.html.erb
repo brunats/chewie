@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-10">
     <h2>
-      <%= t('.title') %>
+      <%= t('.title', id: @order.id) %>
     </h2>
   </div>
   <div class="col-2">
@@ -11,40 +11,16 @@
   </div>
 </div>
 
-<div class="row">
-  <%= form_for @order, url: orders_path, method: :post do |f| %>
-
-    <div class="form-group row">
-      <div class="col-2">
-        <%= f.label :customer, html: {class: 'col-sm-2 col-form-label'}, :selected => @order.customer.id%>
-      <div>
-      <div class="col-10">
-        <%= f.select :customer_id, Customer.order(:name).collect { |p| [ p.name, p.id ] }, html: {class: 'form-control'}%>
-      </div>
+<%= form_for @order, url: order_path(@order.id), method: :patch do |f| %>
+  <div class="form-group row">
+    <div class="col-6 text-right font-weight-bold">
+      <%= f.label :customer, html: {class: 'col-sm-2 col-form-label'}, :selected => @order.customer.id%>
     </div>
-
-    <div class="form-group row">
-      <div class="col-12">
-        <table class="table table-striped table-borderless">
-          <thead>
-            <tr class="align-middle">
-              <th scope="col">#</th>
-              <th scope="col"><%= Product.human_attribute_name(:name) %></th>
-              <th scope="col"><%= Product.human_attribute_name(:multiple) %></th>
-              <th scope="col"><%= Product.human_attribute_name(:price) %></th>
-              <th scope="col"><%= OrderProduct.human_attribute_name(:unit_price) %></th>
-              <th scope="col"><%= OrderProduct.human_attribute_name(:units) %></th>
-            </tr>
-          </thead>
-          <tbody>
-            <%= render(partial: 'product', collection: Product.order(:name)) %>
-          </tbody>
-        </table>
-      </div>
+    <div class="col-6">
+      <%= f.select :customer_id, Customer.order(:name).collect { |p| [ p.name, p.id ] }, html: {class: 'form-control'}%>
     </div>
-
-    <div class="col-12">
-      <%= f.submit t('.save') %>
-    </div>
-  <% end %>
-</div>
+  </div>
+  <div class="col-12 text-center">
+    <%= f.submit t('.save') %>
+  </div>
+<% end %>
