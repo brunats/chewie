@@ -8,7 +8,7 @@ class OrderTest < ActiveSupport::TestCase
 
   test 'belongs to customer' do
     assert_not @order.save
-    assert_equal @order.errors[:customer], ['must exist']
+    assert_equal @order.errors[:customer], ['é obrigatório(a)']
     @order.customer = @customer
     assert @order.save
   end

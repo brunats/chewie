@@ -16,7 +16,7 @@ class OrderProductTest < ActiveSupport::TestCase
   test 'belongs to order' do
     @order_product.order = nil
     assert_not @order_product.save
-    assert_equal @order_product.errors[:order], ['must exist']
+    assert_equal @order_product.errors[:order], ['é obrigatório(a)']
 
     @order_product.order = @order
     assert @order_product.save
@@ -25,7 +25,7 @@ class OrderProductTest < ActiveSupport::TestCase
   test 'belongs to product' do
     @order_product.product = nil
     assert_not @order_product.save
-    assert_equal @order_product.errors[:product], ['must exist']
+    assert_equal @order_product.errors[:product], ['é obrigatório(a)']
 
     @order_product.product = @product
     assert @order_product.save

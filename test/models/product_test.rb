@@ -8,7 +8,7 @@ class ProductTest < ActiveSupport::TestCase
   test 'invalid without name' do
     @product.name = ''
     assert @product.invalid?
-    assert_equal @product.errors[:name], ["can't be blank"]
+    assert_equal @product.errors[:name], ["não pode ficar em branco"]
   end
 
   test 'uniqueness name' do
@@ -16,19 +16,19 @@ class ProductTest < ActiveSupport::TestCase
     assert_equal 1, Product.all.count
 
     assert @product.invalid?
-    assert_equal @product.errors[:name], ['has already been taken']
+    assert_equal @product.errors[:name], ['já está em uso']
   end
 
   test 'price presence' do
     @product.price = nil
     assert @product.invalid?
-    assert_equal @product.errors[:price], ["can't be blank"]
+    assert_equal @product.errors[:price], ["não pode ficar em branco"]
   end
 
   test 'multiple presence' do
     @product.multiple = nil
     assert @product.invalid?
-    assert_equal @product.errors[:multiple], ["can't be blank"]
+    assert_equal @product.errors[:multiple], ["não pode ficar em branco"]
   end
 
   test 'has many order products' do
