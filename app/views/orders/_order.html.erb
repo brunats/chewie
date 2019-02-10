@@ -3,7 +3,7 @@
   <td class="align-middle"><%= order.customer.name %></td>
   <td class="align-middle"><%= order.order_products.count %></td>
   <td class="align-middle">
-    <%= link_to edit_order_path(order), class: 'btn btn-outline-primary' do %>
+    <%= link_to edit_order_path(order), class: 'btn btn-outline-primary', order: @order do %>
       <%= fa_icon('pencil') %>
     <% end %>
     <%= link_to order_path(order), class: 'btn btn-outline-danger', method: :delete do %>
