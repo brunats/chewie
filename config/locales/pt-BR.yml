@@ -36,3 +36,6 @@ pt-BR:
       not_great_sale: Você vendeu esse item abaixo do preço sugerido.
     order_product_form:
       add: Adicionar
+  order_product:
+    edit:
+      save: Salvar

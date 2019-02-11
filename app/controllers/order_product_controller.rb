@@ -1,4 +1,15 @@
 class OrderProductController < ApplicationController
+  def edit
+    @order_product = OrderProduct.find(params[:id])
+  end
+
+  def update
+    @order_product = OrderProduct.find(params[:id])
+    return redirect_to(edit_order_path(@order_product.order)) if @order_product.update(update_params)
+    flash[:warning] = @order_product.errors.to_a.first
+    render :edit
+  end
+
   def create
     flash[:warning] = order_error unless order_product.valid? && order_product.save
     redirect_to(edit_order_path(order))
@@ -10,6 +21,10 @@ class OrderProductController < ApplicationController
   end
 
   private
+
+  def update_params
+    params[:order_product].permit(:units, :unit_price, :product_id)
+  end
 
   def order_error
     order_product.errors.to_a.first

@@ -1,0 +1,32 @@
+<%= form_for @order_product, url: order_product_path(@order_product), method: :patch do |f| %>
+  <div class="form-group row">
+    <div class="col-6 text-right font-weight-bold">
+      <%= f.label :product, html: {class: 'col-sm-2 col-form-label'} %>
+    </div>
+    <div class="col-6">
+      <%= f.select :product_id, Product.order(:name).collect { |p| [ p.name, p.id ] }, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6 text-right font-weight-bold">
+      <%= f.label :units, html: {class: 'col-sm-2 col-form-label'} %>
+    </div>
+    <div class="col-6">
+      <%= f.number_field :units, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-6 text-right font-weight-bold">
+      <%= f.label :unit_price, html: {class: 'col-sm-2 col-form-label'} %>
+    </div>
+    <div class="col-6">
+      <%= f.number_field :unit_price, step: :any, class: 'form-control' %>
+    </div>
+  </div>
+
+  <div class="col-12 text-center">
+    <%= f.submit t('.save') %>
+  </div>
+<% end %>
