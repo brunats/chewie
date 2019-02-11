@@ -1,4 +1,15 @@
 <tr id="<%= "order#{order_product.id}" %>">
+  <td class="align-middle">
+    <% if order_product.great_sale? %>
+      <div class="btn btn-outline-success" data-toggle="tooltip" data-placement="left" title="<%= t('.great_sale') %>">
+        <%= fa_icon('smile-o') %>
+      </div>
+    <% else %>
+      <div class="btn btn-outline-warning" data-toggle="tooltip" data-placement="left" title="<%= t('.not_great_sale') %>">
+        <%= fa_icon('frown-o') %>
+      </div>
+    <% end %>
+  </td>
   <td class="align-middle"><%= order_product.product.name %></td>
   <td class="align-middle"><%= order_product.units %></td>
   <td class="align-middle"><%= number_to_currency(order_product.unit_price) %></td>

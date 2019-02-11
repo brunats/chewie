@@ -1,4 +1,7 @@
 pt-BR:
+  errors:
+    difference_price_error: Não podemos aceitar um preço menor que  %{minimun_value}
+    multiple_unit_error: A quantidade precisa ser múltipla de %{multiple_value}
   destroyed: Removido com sucesso
   activerecord:
     models:
@@ -14,7 +17,7 @@ pt-BR:
           product:
             name: Nome do Produto
             price: Preço Sugerido
-            multiple: Multiplo
+            multiple: Múltiplo
           order_product:
             product: Produto
             units: Unidades da Compra
@@ -28,5 +31,8 @@ pt-BR:
       title: 'Pedido #%{id}'
       save: Salvar
       back: Voltar
+    order_product:
+      great_sale: Parabéns! Esta foi uma ótima venda.
+      not_great_sale: Você vendeu esse item abaixo do preço sugerido.
     order_product_form:
       add: Adicionar
