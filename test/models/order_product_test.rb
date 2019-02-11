@@ -10,7 +10,7 @@ class OrderProductTest < ActiveSupport::TestCase
       multiple: 1
     )
 
-    @order_product = OrderProduct.new(units: 2, unit_price: 4.5, order: @order, product: @product)
+    @order_product = OrderProduct.new(units: 2, unit_price: 13_500, order: @order, product: @product)
   end
 
   test 'belongs to order' do
@@ -29,5 +29,11 @@ class OrderProductTest < ActiveSupport::TestCase
 
     @order_product.product = @product
     assert @order_product.save
+  end
+
+  test 'great sale' do
+    assert_not @order_product.great_sale?
+    @order_product.update(unit_price: 16_000)
+    assert @order_product.great_sale?
   end
 end

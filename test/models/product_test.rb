@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
   setup do
-    @product = Product.new(name: 'R2D2', price: 2, multiple: 4)
+    @product = Product.new(name: 'R2D2', price: 2.50, multiple: 4)
   end
 
   test 'invalid without name' do
@@ -37,13 +37,13 @@ class ProductTest < ActiveSupport::TestCase
     order = Order.create!(customer: customer)
     order_products = [
       OrderProduct.create!(
-        units: 2,
+        units: 4,
         unit_price: 4,
         product: @product,
         order: order
       ),
       OrderProduct.create!(
-        units: 2,
+        units: 8,
         unit_price: 4,
         product: @product,
         order: order

@@ -1,6 +1,6 @@
 pt-BR:
   errors:
-    difference_price_error: Não podemos aceitar um preço menor que  %{minimun_value}
+    difference_price_error: Não podemos aceitar um preço menor que %{minimun_value}
     multiple_unit_error: A quantidade precisa ser múltipla de %{multiple_value}
   destroyed: Removido com sucesso
   activerecord:

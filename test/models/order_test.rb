@@ -27,7 +27,7 @@ class OrderTest < ActiveSupport::TestCase
 
     order_product = OrderProduct.create!(
       units: 5,
-      unit_price: 3.14,
+      unit_price: 15_000,
       order: @order,
       product: product
     )
