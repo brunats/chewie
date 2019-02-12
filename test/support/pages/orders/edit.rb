@@ -13,10 +13,6 @@ module Pages
         @page.has_content?("Pedido ##{order.id}")
       end
 
-      def change_select_customer(customer)
-       @page.find("option[value='#{customer.id}']").click
-      end
-
       def select_product(product)
         @page.find("option[value='#{product.id}']").click
       end
@@ -32,10 +28,10 @@ module Pages
       def click_on_add
         @page.find('.new_order_product [name=commit]').click
       end
-      #
-      # def click_on_create
-      #   @page.find('[name=commit]').click
-      # end
+
+      def click_on_delete(order_product)
+        @page.find(:xpath, "//*[@id=\"order#{order_product.id}\"]/td[5]/a[1]").click
+      end
 
       def click_on_back
         @page.find('.btn.btn-outline-primary').click
