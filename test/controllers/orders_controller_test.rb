@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class OrderControllerTest < ActionDispatch::IntegrationTest
+class OrdersControllerTest < ActionDispatch::IntegrationTest
   include Rails.application.routes.url_helpers
 
   test 'index response success' do
