@@ -1,6 +1,7 @@
 # Chewie Store
 
 [![Build Status](https://travis-ci.org/brunats/chewie.svg?branch=master)](https://travis-ci.org/brunats/chewie)
+[![Coverage Status](https://coveralls.io/repos/github/brunats/chewie/badge.svg?branch=master)](https://coveralls.io/github/brunats/chewie?branch=master)
 
 ## Setup
 
