@@ -38,4 +38,6 @@ pt-BR:
       add: Adicionar
   order_product:
     edit:
+      title: Editar Produto do Pedido
+      back: Voltar
       save: Salvar

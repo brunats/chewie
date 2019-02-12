@@ -1,9 +1,43 @@
 en:
+  errors:
+    difference_price_error: We can not accept a lower price than %{minimun_value}
+    multiple_unit_error: Quantity must be multiple of %{multiple_value}
+  destroyed: Removed successfully
   activerecord:
     models:
       order:
         one: Order
         other: Orders
+      order_product:
+        one: Order Product
+        other: Order Products
     attributes:
           order:
             customer: Customer
+          product:
+            name: Product Name
+            price: Suggested Price
+            multiple: Multiple
+          order_product:
+            product: Product
+            units: Units
+            unit_price: Unit Price
+  orders:
+    new:
+      title: New Order
+      create: Create
+      back: Back
+    edit:
+      title: 'Order #%{id}'
+      save: Save
+      back: Back
+    order_product:
+      great_sale: Congratulations! This was a great sale.
+      not_great_sale: You sold this item below the suggested retail price.
+    order_product_form:
+      add: Add
+  order_product:
+    edit:
+      title: Edit Order Product
+      back: Back
+      save: Save

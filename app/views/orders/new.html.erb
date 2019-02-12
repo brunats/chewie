@@ -11,10 +11,12 @@
   </div>
 </div>
 
+<hr class="line">
+
 <%= form_for @new_order, url: orders_path, method: :post do |f| %>
   <%= render(partial: 'form', locals: { order: @new_order, f: f }) %>
 
   <div class="col-12 text-center">
-    <%= f.submit t('.create') %>
+    <%= f.submit t('.create'), class: 'btn btn-primary' %>
   </div>
 <% end %>

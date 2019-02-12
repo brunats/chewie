@@ -1,3 +1,18 @@
+<div class="row">
+  <div class="col-10">
+    <h2>
+      <%= t('.title') %>
+    </h2>
+  </div>
+  <div class="col-2">
+    <%= link_to edit_order_path(@order_product.order), class: 'btn btn-outline-primary' do %>
+      <%= t('.back') %>
+    <% end %>
+  </div>
+</div>
+
+<hr class="line">
+
 <%= form_for @order_product, url: order_product_path(@order_product), method: :patch do |f| %>
   <div class="form-group row">
     <div class="col-6 text-right font-weight-bold">

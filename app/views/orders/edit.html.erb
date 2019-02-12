@@ -11,13 +11,35 @@
   </div>
 </div>
 
+<hr class="line">
+
 <%= form_for @order, url: order_path(@order.id), method: :patch do |f| %>
   <%= render(partial: 'form', locals: { order: @order, f: f }) %>
 
   <div class="col-12 text-center">
-    <%= f.submit t('.save') %>
+    <%= f.submit t('.save'), class: 'btn btn-primary' %>
   </div>
 <% end %>
 
-<br>
+<hr class="line">
+
 <%= render(partial: 'order_product_form', locals: { order: @order }) %>
+
+<hr class="line">
+
+<div class="row">
+  <table class="table table-striped table-borderless">
+    <thead>
+      <tr class="align-middle">
+        <th scope="col"></th>
+        <th scope="col"><%= OrderProduct.human_attribute_name(:name) %></th>
+        <th scope="col"><%= OrderProduct.human_attribute_name(:units) %></th>
+        <th scope="col"><%= OrderProduct.human_attribute_name(:unit_price) %></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render(partial: 'order_product', collection: @order.order_products) %>
+    </tbody>
+  </table>
+</div>
