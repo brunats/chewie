@@ -7,6 +7,7 @@ module Orders
     test 'index page must have navbar' do
       Capybara.current_driver = Capybara.javascript_driver
       index_page.visit
+      assert index_page.shown?
       assert index_page.has_navbar?
     end
 

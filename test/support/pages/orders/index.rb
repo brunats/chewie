@@ -9,6 +9,10 @@ module Pages
         @page.visit(root_path)
       end
 
+      def shown?
+        @page.has_content?('Pedido')
+      end
+
       def has_navbar?
         @page.find('.navbar').visible?
       end
