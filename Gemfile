@@ -37,6 +37,8 @@ end
 group :test do
   gem 'database_cleaner'
 
+  gem 'coveralls'
+
   gem 'capybara', '>= 2.15'
   gem 'capybara-selenium'
   gem 'selenium-webdriver'
