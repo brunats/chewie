@@ -27,6 +27,10 @@ bundle exec rails s
 ```
 
 ## Test
+
+![Testes](teste.gif)
+
+
 ```
 docker-compose up db
 BROWSER=TRUE rails t
