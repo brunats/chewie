@@ -7,6 +7,8 @@
 
 Nós usamos docker :tada:!
 
+[![asciicast](https://asciinema.org/a/9UmgPPEl6suJQ6Kov0VfXOdg7.svg)](https://asciinema.org/a/9UmgPPEl6suJQ6Kov0VfXOdg7)
+
 ```sh
 docker-compose up --build
 ```
