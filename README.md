@@ -68,3 +68,12 @@ bundle exec rails s
 docker-compose up db
 BROWSER=TRUE rails t
 ```
+
+# Contribua
+![Yoda](https://s.aficionados.com.br/imagens/yoda-fazer.gif)
+
+Fique a vontade para realizar fork e melhorar esse código. PR's são muito bem vindos.
+
+
+> QUE A FORÇA ESTEJA COM VOCÊ
+
