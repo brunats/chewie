@@ -5,13 +5,18 @@
 
 ## Setup
 
+Nós usamos docker :tada:!
+
+```sh
+docker-compose up --build
+```
+
+Mas você também pode executar da forma tradicional...
+
 ```sh
 cp config/database.example.yml config/database.yml
 cp sample.env .env
-docker-compose up
-```
 
-```sh
 bundle install
 bundle exec rails db:create
 bundle exec rails db:migrate
@@ -21,5 +26,6 @@ bundle exec rails s
 
 ## Test
 ```
+docker-compose up db
 BROWSER=TRUE rails t
 ```

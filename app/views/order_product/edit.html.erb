@@ -5,7 +5,7 @@
     </h2>
   </div>
   <div class="col-2">
-    <%= link_to edit_order_path(@order_product.order), class: 'btn btn-outline-primary' do %>
+    <%= link_to edit_order_path(id: @order_product.order_id), class: 'btn btn-outline-primary' do %>
       <%= t('.back') %>
     <% end %>
   </div>

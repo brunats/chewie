@@ -14,7 +14,7 @@ module Pages
       end
 
       def select_product(product)
-        @page.find("option[value='#{product.id}']").click
+        @page.find("#new_order_product option[value='#{product.id}']").click
       end
 
       def fill_in_product_price(price)
