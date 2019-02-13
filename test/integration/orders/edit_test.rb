@@ -18,7 +18,7 @@ module Orders
     end
 
     test 'edit an order' do
-      Capybara.current_driver = Capybara.javascript_driver
+      Capybara.current_driver = nil
       edit_page.visit(@order)
 
       edit_page.select_product(@product)

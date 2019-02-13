@@ -11,4 +11,8 @@ class OrderProduct < ApplicationRecord
   def great_sale?
     unit_price > product.price
   end
+
+  def unit_price=(raw)
+    super(raw.to_s.gsub(',', '').to_f.round(2))
+  end
 end

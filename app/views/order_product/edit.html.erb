@@ -16,7 +16,7 @@
 <%= form_for @order_product, url: order_product_path(@order_product), method: :patch do |f| %>
   <div class="form-group row">
     <div class="col-6 text-right font-weight-bold">
-      <%= f.label :product, html: {class: 'col-sm-2 col-form-label'} %>
+      <%= f.label :product, class: 'col-form-label' %>
     </div>
     <div class="col-6">
       <%= f.select :product_id, Product.order(:name).collect { |p| [ p.name, p.id ] }, class: 'form-control' %>
@@ -25,7 +25,7 @@
 
   <div class="form-group row">
     <div class="col-6 text-right font-weight-bold">
-      <%= f.label :units, html: {class: 'col-sm-2 col-form-label'} %>
+      <%= f.label :units, class: 'col-form-label' %>
     </div>
     <div class="col-6">
       <%= f.number_field :units, class: 'form-control' %>
@@ -34,10 +34,10 @@
 
   <div class="form-group row">
     <div class="col-6 text-right font-weight-bold">
-      <%= f.label :unit_price, html: {class: 'col-sm-2 col-form-label'} %>
+      <%= f.label :unit_price, class: 'col-form-label' %>
     </div>
     <div class="col-6">
-      <%= f.number_field :unit_price, step: :any, class: 'form-control' %>
+      <%= f.text_field :unit_price, step: :any, class: 'form-control js-currency' %>
     </div>
   </div>
 

@@ -36,4 +36,10 @@ class OrderProductTest < ActiveSupport::TestCase
     @order_product.update(unit_price: 16_000)
     assert @order_product.great_sale?
   end
+
+  test 'round 2' do
+    @product.update!(price: 3.14)
+    @order_product.update!(unit_price: 3.14159265)
+    assert_equal @order_product.unit_price, 3.14
+  end
 end
