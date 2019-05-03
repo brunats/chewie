@@ -12,7 +12,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'rails-i18n', '~> 5.1'
-gem 'bootstrap', '~> 4.1.3'
+gem "bootstrap", '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3.3'
 gem 'font-awesome-rails', '~> 4.7.0.4'
 
